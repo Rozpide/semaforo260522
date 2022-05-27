@@ -10,7 +10,6 @@ var gh = require('parse-github-url');
 if (!fs.existsSync(path.resolve(__dirname,'.git'))){
     Console.error("No repository found on this project");
     Console.help("Follow this steps to create a new repository for your project: http://kbroman.org/github_tutorial/pages/init.html");
-    return;
 }
 
 const origin = remoteOriginUrl.sync();
@@ -22,7 +21,7 @@ $ git remote get-url origin
 Add your remote by doing:
 $ git remote add origin <github_repository_url>
 `);
-return;
+
 }
 Console.info("The remote was found successfully, starting the deploy from here: "+origin);
 
